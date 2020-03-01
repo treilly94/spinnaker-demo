@@ -9,8 +9,8 @@ resource "digitalocean_kubernetes_cluster" "spinnaker" {
 
   node_pool {
     name       = "spinnaker-pool"
-    size       = "s-1vcpu-2gb"
-    node_count = 2
+    size       = "s-2vcpu-4gb"
+    node_count = 3
   }
 }
 
