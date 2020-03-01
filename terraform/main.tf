@@ -13,3 +13,8 @@ resource "digitalocean_kubernetes_cluster" "spinnaker" {
     node_count = 2
   }
 }
+
+resource "local_file" "kubeconfig" {
+  content  = digitalocean_kubernetes_cluster.spinnaker.kube_config.0.raw_config
+  filename = "../kubeconfig.yml"
+}
