@@ -16,10 +16,10 @@ resource "azurerm_storage_account" "spinnaker" {
 }
 
 resource "azurerm_kubernetes_cluster" "spinnaker" {
-  name                = "spinnaker"
+  name                = "spinnakerkube"
   location            = azurerm_resource_group.spinnaker.location
   resource_group_name = azurerm_resource_group.spinnaker.name
-  dns_prefix          = "spinnaker"
+  dns_prefix          = "spinnakerkube"
 
   default_node_pool {
     name       = "default"
@@ -28,8 +28,8 @@ resource "azurerm_kubernetes_cluster" "spinnaker" {
   }
 
   service_principal {
-    client_id     = "f93a47fa-6c50-4155-969f-7072e0724b64"
-    client_secret = "281e4b89-26e1-49b7-babd-23fdf0c4edf8"
+    client_id     = var.sp_client_id
+    client_secret = var.sp_client_secret
   }
 }
 
