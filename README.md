@@ -4,7 +4,7 @@
 
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 * [halyard](https://www.spinnaker.io/setup/install/halyard/#1-install-halyard)
-* A azure storage account
+* A [azure service principal](https://docs.microsoft.com/en-us/cli/azure/create-an-azure-service-principal-azure-cli?view=azure-cli-latest)
 
 # Quick start
 
