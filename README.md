@@ -21,7 +21,13 @@ Full instructions can be found [here](https://www.spinnaker.io/setup/install/)
 
 The thing spinnaker runs on
 
-Run the script `./scripts/cloudprovider.sh` or follow the [onlie instructions](https://www.spinnaker.io/setup/install/providers/kubernetes-v2/)
+Run the script `./scripts/kubernetes.sh` or follow the [onlie instructions](https://www.spinnaker.io/setup/install/providers/kubernetes-v2/)
+
+#### Addidtional Cloud providers
+
+We can set up additional cloud providers that can be used by spinnaker after instillation. [Docs](https://www.spinnaker.io/setup/install/providers/)
+
+I have a script to add a azure provider `./scripts/azure.sh`
 
 ### Setup storage
 

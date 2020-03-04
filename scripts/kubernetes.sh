@@ -5,7 +5,7 @@ hal config provider kubernetes enable
 
 # Add account
 CONTEXT=$(kubectl config current-context)
-ACCOUNT="azure"
+ACCOUNT="spinnakerkubernetes"
 
 hal config provider kubernetes account add $ACCOUNT \
     --provider-version v2 \
