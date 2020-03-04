@@ -27,7 +27,7 @@ Run the script `./scripts/cloudprovider.sh` or follow the [onlie instructions](h
 
 Persistant storage for spinnikers data (in this case on azure)
 
-The script assumes that a storage account already exists in a resource group called `SpinnakerStorage` and that you are already logged into the azcli. It will ask you for the name of the storage account
+The script uses the storage account created by the terraform and assumes that you are already logged into the azcli. It will ask you for the name of the storage account
 
 Run the script `./scripts/storage.sh` or follow the [onlie instructions](https://www.spinnaker.io/setup/install/storage/azs/)
 

@@ -5,7 +5,7 @@ hal config provider kubernetes enable
 
 # Add account
 CONTEXT=$(kubectl config current-context)
-ACCOUNT="my-k8s-v2-account"
+ACCOUNT="azure"
 
 hal config provider kubernetes account add $ACCOUNT \
     --provider-version v2 \
