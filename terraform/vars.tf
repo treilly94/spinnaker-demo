@@ -1,10 +1,4 @@
-variable "sp_client_id" {
+variable "do_token" {
   type        = string
-  description = "The client id for the kubeneties service principal"
-}
-
-variable "sp_client_secret" {
-  type        = string
-  description = "The client secret for the kubeneties service principal"
-
+  description = "A token to authenticate with the digital ocean api"
 }
