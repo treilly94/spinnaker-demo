@@ -8,6 +8,8 @@
 
 # Quick start
 
+If you want to remove any previous config you can delete `~/.hal/config`
+
 ## Kuberneties
 
 1. Run the terraform
