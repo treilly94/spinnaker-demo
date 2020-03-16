@@ -4,9 +4,11 @@
 
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 * [halyard](https://www.spinnaker.io/setup/install/halyard/#1-install-halyard)
-* A azure storage account
+* A [azure service principal](https://docs.microsoft.com/en-us/cli/azure/create-an-azure-service-principal-azure-cli?view=azure-cli-latest)
 
 # Quick start
+
+If you want to remove any previous config you can delete `~/.hal/config`
 
 ## Kuberneties
 
@@ -21,13 +23,19 @@ Full instructions can be found [here](https://www.spinnaker.io/setup/install/)
 
 The thing spinnaker runs on
 
-Run the script `./scripts/cloudprovider.sh` or follow the [onlie instructions](https://www.spinnaker.io/setup/install/providers/kubernetes-v2/)
+Run the script `./scripts/kubernetes.sh` or follow the [onlie instructions](https://www.spinnaker.io/setup/install/providers/kubernetes-v2/)
+
+#### Addidtional Cloud providers
+
+We can set up additional cloud providers that can be used by spinnaker after instillation. [Docs](https://www.spinnaker.io/setup/install/providers/)
+
+I have a script to add a azure provider `./scripts/azure.sh`
 
 ### Setup storage
 
 Persistant storage for spinnikers data (in this case on azure)
 
-The script assumes that a storage account already exists in a resource group called `SpinnakerStorage` and that you are already logged into the azcli. It will ask you for the name of the storage account
+The script uses the storage account created by the terraform and assumes that you are already logged into the azcli. It will ask you for the name of the storage account
 
 Run the script `./scripts/storage.sh` or follow the [onlie instructions](https://www.spinnaker.io/setup/install/storage/azs/)
 
