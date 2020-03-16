@@ -5,7 +5,7 @@ echo "What is the name of your storage account?"
 read STORAGE_ACCOUNT_NAME
 
 RESOURCE_GROUP="spinnaker"
-STORAGE_ACCOUNT_KEY=$(az storage account keys list --resource-group $RESOURCE_GROUP --account-name $STORAGE_ACCOUNT_NAME --query [0].value | tr -d '"')
+STORAGE_ACCOUNT_KEY=$(az storage account keys list --resource-group $RESOURCE_GROUP --account-name $STORAGE_ACCOUNT_NAME --query [0].value -o json | tr -d '"')
 
 # Set storage account details
 hal config storage azs edit \
